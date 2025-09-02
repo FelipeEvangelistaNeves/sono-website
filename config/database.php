@@ -69,18 +69,12 @@ class Database {
     
     // Verificar usuário admin
     public function verifyAdmin($username, $password) {
-        $stmt = $this->connection->prepare("SELECT id, password FROM admin_users WHERE username = ?");
+        $stmt = $this->getConnection()->prepare("SELECT id, password FROM admin_users WHERE username = ?");
         $stmt->execute([$username]);
-        $user = $stmt->fetch();
-        
-        if ($user && password_verify($password, $user['password'])) {
-            // Atualizar último login
-            $updateStmt = $this->connection->prepare("UPDATE admin_users SET last_login = NOW() WHERE id = ?");
-            $updateStmt->execute([$user['id']]);
-            
-            return $user['id'];
+        $admin = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($admin && password_verify($password, $admin['password'])) {
+            return $admin['id'];
         }
-        
         return false;
     }
 }
