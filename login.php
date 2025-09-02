@@ -184,7 +184,7 @@ if ($_POST) {
         <div style="margin-top: 20px; padding: 15px; background: rgba(52, 152, 219, 0.1); border-radius: 10px; font-size: 0.9rem; color: #34495e;">
             <strong>Dados de teste:</strong><br>
             Usuário: <code>admin</code><br>
-            Senha: <code>admin123</code>
+            Senha: <code>123</code>
         </div>
     </div>
 </body>
