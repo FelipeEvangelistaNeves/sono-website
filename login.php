@@ -47,7 +47,7 @@ if ($_POST) {
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #131f53ff 0%, #3c5a90ff 100%);
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -127,7 +127,7 @@ if ($_POST) {
         }
         
         .error {
-            background: #e74c3c;
+            background: #c00;
             color: white;
             padding: 15px;
             border-radius: 10px;
