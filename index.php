@@ -60,7 +60,7 @@ $textoRodape = $db->getConfig('texto_rodape');
             <h2>Contato</h2>
             <br>
 
-            <form style="display: flex; flex-direction: column; width: 100%; margin: auto;" action="contact.php" method="POST">
+            <form style="display: flex; flex-direction: column; width: 100%; margin: auto;" action="#" method="POST">
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
 
