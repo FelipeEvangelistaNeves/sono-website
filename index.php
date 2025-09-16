@@ -53,7 +53,6 @@ $textoRodape = $db->getConfig('texto_rodape');
             <article style="display: flex; flex-direction: column; align-items: center;">
                 <img src="<?= htmlspecialchars($nextstationProdutos) ?>" alt="NextStation Vibe" style="width: 80%; max-width: 500px;">
                 <h3><?= htmlspecialchars($tituloProduto) ?></h3>
-                <p>Um console portátil moderno com design ergonômico, desempenho potente e compatibilidade com seus jogos favoritos.</p>
             </article>
         </section>
 

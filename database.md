@@ -4,14 +4,14 @@ USE sono_website;
 
 -- Tabela para configurações do site
 CREATE TABLE site_config (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    config_key VARCHAR(50) NOT NULL UNIQUE,
-    config_value TEXT,
-    config_type ENUM('text', 'textarea', 'image', 'url') DEFAULT 'text',
-    section VARCHAR(30) NOT NULL,
-    label VARCHAR(100) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+id INT AUTO_INCREMENT PRIMARY KEY,
+config_key VARCHAR(50) NOT NULL UNIQUE,
+config_value TEXT,
+config_type ENUM('text', 'textarea', 'image', 'url') DEFAULT 'text',
+section VARCHAR(30) NOT NULL,
+label VARCHAR(100) NOT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 );
 
 -- Inserindo dados padrão
@@ -34,25 +34,25 @@ INSERT INTO site_config (config_key, config_value, config_type, section, label) 
 
 -- Tabela para usuários admin (opcional)
 CREATE TABLE admin_users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    last_login TIMESTAMP NULL
+id INT AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR(50) NOT NULL UNIQUE,
+password VARCHAR(255) NOT NULL,
+email VARCHAR(100) NOT NULL,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+last_login TIMESTAMP NULL
 );
 
 -- Inserindo usuário admin padrão (senha: admin123)
 INSERT INTO admin_users (username, password, email) VALUES
-('admin', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin@sono.com');
+('admin', '$2y$10$dbfDQgNHM7zvT/rl8Sfq8eYlWVqh42JJ/F9MIg.fLz40LDCfpJ88S', 'admin@sono.com');
 
 -- Tabela para logs de alterações
 CREATE TABLE config_logs (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    config_key VARCHAR(50) NOT NULL,
-    old_value TEXT,
-    new_value TEXT,
-    admin_id INT,
-    changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (admin_id) REFERENCES admin_users(id)
+id INT AUTO_INCREMENT PRIMARY KEY,
+config_key VARCHAR(50) NOT NULL,
+old_value TEXT,
+new_value TEXT,
+admin_id INT,
+changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+FOREIGN KEY (admin_id) REFERENCES admin_users(id)
 );
