@@ -153,14 +153,14 @@ if ($_POST) {
 <body>
     <div class="login-container">
         <div class="logo">
-            <h1>🔐</h1>
+            
             <h1>Admin SONO</h1>
             <p>Faça login para continuar</p>
         </div>
         
         <?php if ($error): ?>
             <div class="error"><?= $error ?></div>
-        <? endif; ?>
+        <?php endif; ?>
         
         <form method="POST">
             <div class="form-group">
@@ -173,7 +173,7 @@ if ($_POST) {
                 <input type="password" id="password" name="password" required>
             </div>
             
-            <button type="submit" class="login-button">🚀 Entrar</button>
+            <button type="submit" class="login-button"> Entrar</button>
         </form>
         
         <div class="back-link">
