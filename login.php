@@ -3,7 +3,6 @@
 session_start();
 require_once 'config/database.php';
 
-// Se já está logado, redireciona
 if (isset($_SESSION['admin_id'])) {
     header('Location: admin.php');
     exit;
@@ -161,7 +160,7 @@ if ($_POST) {
         
         <?php if ($error): ?>
             <div class="error"><?= $error ?></div>
-        <?php endif; ?>
+        <? endif; ?>
         
         <form method="POST">
             <div class="form-group">
