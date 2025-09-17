@@ -48,10 +48,10 @@ foreach ($configs as $config) {
 <body>
     <div class="container">
         <div class="header">
-            <h1>🛠️ Painel Administrativo SONO</h1>
+            <h1> Painel Administrativo SONO</h1>
             <div class="header-actions">
-                <a href="index.php" class="btn btn-secondary" target="_blank">👁️ Ver Site</a>
-                <a href="logout.php" class="btn btn-danger">🚪 Sair</a>
+                <a href="index.php" class="btn btn-secondary" target="_blank"> Ver Site</a>
+                <a href="logout.php" class="btn btn-danger">Sair</a>
             </div>
         </div>
         
@@ -68,13 +68,13 @@ foreach ($configs as $config) {
         <?php endif; ?>
         
         <div class="tabs">
-            <button class="tab-button active" onclick="showTab('editor')">📝 Editor</button>
-            <button class="tab-button" onclick="showTab('preview')">👁️ Preview</button>
+            <button class="tab-button active" onclick="showTab('editor')"> Editor</button>
+            <button class="tab-button" onclick="showTab('preview')"> Preview</button>
         </div>
         
         <div id="editor" class="tab-content active">
             <form method="POST" id="contentForm">
-                <div class="section-title">🖼️ Imagens</div>
+                <div class="section-title">Imagens</div>
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="logo_sono"><?= $configData['logo_sono']['label'] ?></label>
@@ -90,7 +90,7 @@ foreach ($configs as $config) {
                     </div>
                 </div>
                 
-                <div class="section-title">📰 Títulos</div>
+                <div class="section-title"> Títulos</div>
                 <div class="form-grid">
                     <div class="form-group">
                         <label for="titulo_home"><?= $configData['titulo_home']['label'] ?></label>
@@ -110,7 +110,7 @@ foreach ($configs as $config) {
                     </div>
                 </div>
                 
-                <div class="section-title">📝 Textos</div>
+                <div class="section-title">Textos</div>
                 <div class="form-group">
                     <label for="texto_home"><?= $configData['texto_home']['label'] ?></label>
                     <textarea id="texto_home" name="texto_home"><?= htmlspecialchars($configData['texto_home']['config_value']) ?></textarea>
@@ -124,7 +124,7 @@ foreach ($configs as $config) {
                     <input type="text" id="texto_rodape" name="texto_rodape" value="<?= htmlspecialchars($configData['texto_rodape']['config_value']) ?>">
                 </div>
                 
-                <button type="submit" class="save-button">💾 Salvar Alterações</button>
+                <button type="submit" class="save-button"> Salvar Alterações</button>
             </form>
         </div>
         
